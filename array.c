@@ -154,3 +154,88 @@ Write a program to count how many times a specific element appears in an array.
        
     return 0;
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* 7. Array Search
+Write a program to search for an element in an array and return its index.
+*/
+#include <stdio.h>
+#include <stdbool.h>
+int main()
+{
+ int taille;
+    printf("give the lenght of the array :");
+    scanf("%d",&taille);
+    int tab[taille];
+    for(int i=0;i<taille;i++)
+    {
+     printf("give an integer elemnt for adding it :") ;
+     scanf("%d",&tab[i]);
+     
+         }
+         int num=0;
+         bool found=false;
+    printf("give the integer looking for  it :") ;
+    scanf("%d",&num);
+        int indice=0;
+         
+         //search
+    for(int j=0;j<taille;j++)
+    {   if(tab[j]==num) {indice=j;found=true;break;}
+        }
+           if(found==true)  printf("the number %d  found in %d indice: ",num,indice);
+       
+    return 0;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*10. Merge Two Arrays
+Write a program to merge two arrays into a third array.
+*/
+#include <stdio.h>
+#include <stdbool.h>
+int main()
+{
+ int taille1;
+    printf("give the lenght of the first array :");
+    scanf("%d",&taille1);
+    int tab1[taille1];
+    for(int i=0;i<taille1;i++)
+    {
+     printf("give an integer elemnt for adding it the first array1 :") ;
+     scanf("%d",&tab1[i]);
+     
+         }
+         
+   int taille2;
+    printf("give the lenght of the second array :");
+    scanf("%d",&taille2);
+    int tab2[taille2];
+    for(int i=0;i<taille2;i++)
+    {
+     printf("give an integer elemnt for adding it to the the second array1 :") ;
+     scanf("%d",&tab2[i]);
+     
+         }
+     int newtaille=taille2+taille1;     
+     int mergetab[newtaille];
+         
+    for (int i=0;i<taille1;i++)
+    {   
+           mergetab[i]=tab1[i];
+        }
+    int t=0;
+    for(int j=taille1;j<newtaille;j++)
+        {mergetab[j]=tab2[t];
+        t++;
+         }
+     
+     for(int i=0;i<newtaille;i++)
+     {
+         printf("%d",mergetab[i]);
+         
+     }
+         return 0;
+         }
+    
